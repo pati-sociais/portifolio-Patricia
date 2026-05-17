@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top,#120012,#000);
+    color:white;
+}
+
+/* NAV */
+.header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,0,150,0.2);
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+}
+
+.logo{
+    color:#ff2fb3;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
+.menu a:hover{
+    color:#ff2fb3;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#ff2fb3;
+    text-shadow:0 0 20px #ff2fb3;
+}
+
+.hero p{
+    color:#bbb;
+}
+
+/* BUTTONS */
+.buttons{
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    margin:5px;
+    background:#ff2fb3;
+    color:white;
+    border-radius:20px;
+    text-decoration:none;
+    box-shadow:0 0 15px #ff2fb3;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.btn.outline{
+    background:transparent;
+    border:1px solid #ff2fb3;
+}
+
+/* SECTIONS */
+.section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.section h2{
+    color:#ff2fb3;
+    margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+/* CARD 3D */
+.card{
+    width:280px;
+    padding:25px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.05);
+    border:1px solid rgba(255,47,179,0.3);
+    backdrop-filter: blur(10px);
+    transition:0.4s;
+    transform-style: preserve-3d;
+}
+
+.card:hover{
+    transform: perspective(1000px) rotateY(12deg) rotateX(10deg) translateY(-10px);
+    box-shadow:0 0 40px #ff2fb3;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .grid{
+        flex-direction:column;
+        align-items:center;
+    }
+}
