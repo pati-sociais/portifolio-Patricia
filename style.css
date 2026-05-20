@@ -79,26 +79,30 @@ body{
 
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
 
-    padding:120px 10%;
+    padding:120px 8%;
 }
 
 .hero-content{
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
 
-    gap:60px;
+    gap:40px;
 
     max-width:1200px;
+
+    width:100%;
+
+    margin-left:-40px;
 }
 
 /* ================= FOTO ================= */
 
 .foto-perfil{
-    width:260px;
-    height:260px;
+    width:210px;
+    height:210px;
 
     border-radius:50%;
 
@@ -333,6 +337,8 @@ body{
         flex-direction:column;
 
         text-align:center;
+
+        margin-left:0;
     }
 
     .hero-text h1{
@@ -340,8 +346,8 @@ body{
     }
 
     .foto-perfil{
-        width:200px;
-        height:200px;
+        width:180px;
+        height:180px;
     }
 
     .nav{
