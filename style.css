@@ -1,160 +1,383 @@
-.menu{
-    display:flex;
-    list-style:none;
-    gap:20px;
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-    .menu{
-        display:none;
-    }
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background: radial-gradient(circle at top,#120012,#000);
+    background:
+    radial-gradient(circle at top,#1a001a,#000000);
+
     color:white;
+
+    overflow-x:hidden;
 }
 
-/* NAV */
+/* ================= HEADER ================= */
+
 .header{
     position:fixed;
     width:100%;
     top:0;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,0,150,0.2);
+    z-index:1000;
+
+    background:rgba(0,0,0,0.5);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:
+    1px solid rgba(255,47,179,0.2);
 }
 
 .nav{
     display:flex;
     justify-content:space-between;
-    padding:15px 40px;
+    align-items:center;
+
+    padding:18px 50px;
 }
 
 .logo{
-    color:#ff2fb3;
+    font-size:1.3rem;
     font-weight:bold;
+
+    color:#ff2fb3;
+
+    letter-spacing:2px;
 }
 
 .menu{
     display:flex;
     list-style:none;
-    gap:20px;
+    gap:25px;
 }
 
 .menu a{
     color:white;
     text-decoration:none;
+
+    transition:0.3s;
 }
 
 .menu a:hover{
     color:#ff2fb3;
+
+    text-shadow:0 0 10px #ff2fb3;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
-    height:100vh;
+    min-height:100vh;
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
+    justify-content:center;
+
+    padding:120px 10%;
 }
 
-.hero h1{
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:60px;
+
+    max-width:1200px;
+}
+
+/* ================= FOTO ================= */
+
+.foto-perfil{
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #ff2fb3;
+
+    box-shadow:
+    0 0 25px #ff2fb3,
+    0 0 60px rgba(255,47,179,0.5);
+
+    transition:0.4s;
+}
+
+.foto-perfil:hover{
+    transform:scale(1.05);
+}
+
+/* ================= TEXTO HERO ================= */
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
     font-size:4rem;
+
     color:#ff2fb3;
-    text-shadow:0 0 20px #ff2fb3;
+
+    text-shadow:
+    0 0 15px #ff2fb3;
 }
 
-.hero p{
-    color:#bbb;
+.hero-text h3{
+    margin-top:10px;
+
+    font-size:1.3rem;
+
+    color:#d9b3ff;
+
+    font-weight:500;
 }
 
-/* BUTTONS */
-.buttons{
+.hero-text p{
     margin-top:20px;
+
+    line-height:1.8;
+
+    color:#cccccc;
+
+    font-size:1.05rem;
+}
+
+/* ================= BOTÕES ================= */
+
+.buttons{
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:10px 20px;
-    margin:5px;
+
+    padding:12px 22px;
+
+    margin-right:15px;
+
+    border-radius:30px;
+
     background:#ff2fb3;
+
     color:white;
-    border-radius:20px;
+
     text-decoration:none;
-    box-shadow:0 0 15px #ff2fb3;
+
     transition:0.3s;
+
+    box-shadow:
+    0 0 20px rgba(255,47,179,0.5);
 }
 
 .btn:hover{
-    transform:translateY(-5px);
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 0 30px #ff2fb3;
 }
 
 .btn.outline{
     background:transparent;
+
     border:1px solid #ff2fb3;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
+
 .section{
-    padding:100px 20px;
+    padding:100px 10%;
+
     text-align:center;
 }
 
 .section h2{
+    font-size:2.5rem;
+
+    margin-bottom:30px;
+
     color:#ff2fb3;
-    margin-bottom:20px;
 }
 
-/* GRID */
+.section p{
+    line-height:1.8;
+
+    color:#d1d1d1;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+/* ================= GRID ================= */
+
 .grid{
     display:flex;
-    flex-wrap:wrap;
+
     justify-content:center;
-    gap:20px;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-top:40px;
 }
 
-/* CARD 3D */
+/* ================= CARDS ================= */
+
 .card{
-    width:280px;
-    padding:25px;
-    border-radius:20px;
-    background: rgba(255,255,255,0.05);
-    border:1px solid rgba(255,47,179,0.3);
-    backdrop-filter: blur(10px);
+    width:320px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,47,179,0.2);
+
+    backdrop-filter:blur(12px);
+
     transition:0.4s;
-    transform-style: preserve-3d;
+
+    transform-style:preserve-3d;
+
+    box-shadow:
+    0 0 25px rgba(255,47,179,0.15);
 }
 
 .card:hover{
-    transform: perspective(1000px) rotateY(12deg) rotateX(10deg) translateY(-10px);
-    box-shadow:0 0 40px #ff2fb3;
+    transform:
+    perspective(1000px)
+    rotateY(10deg)
+    rotateX(8deg)
+    translateY(-10px);
+
+    box-shadow:
+    0 0 40px #ff2fb3;
 }
 
-/* RESPONSIVO */
-@media(max-width:768px){
-    .hero h1{
-        font-size:2.5rem;
+.card h3{
+    color:#ff2fb3;
+
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d8d8d8;
+}
+
+/* ================= LINKS DOS PROJETOS ================= */
+
+.project-link{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:10px 18px;
+
+    border-radius:15px;
+
+    background:#ff2fb3;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.project-link:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 20px #ff2fb3;
+}
+
+/* ================= CONTATO ================= */
+
+#contato p{
+    margin-top:15px;
+}
+
+#contato a{
+    color:#ff2fb3;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+#contato a:hover{
+    text-shadow:
+    0 0 10px #ff2fb3;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:900px){
+
+    .hero-content{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
+    }
+
+    .foto-perfil{
+        width:200px;
+        height:200px;
+    }
+
+    .nav{
+        padding:15px 20px;
     }
 
     .menu{
+        gap:12px;
+    }
+}
+
+@media(max-width:768px){
+
+    .menu{
         display:none;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+
+    .hero-text h1{
+        font-size:2.5rem;
+    }
+
+    .hero-text h3{
+        font-size:1.1rem;
     }
 
     .grid{
         flex-direction:column;
         align-items:center;
     }
-}
 
-#contato a{
-    color:#ff2fb3;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-#contato a:hover{
-    text-shadow:0 0 10px #ff2fb3;
+    .card{
+        width:100%;
+        max-width:350px;
+    }
 }
