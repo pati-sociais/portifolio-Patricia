@@ -303,28 +303,32 @@ body{
 }
 
 /* ================= LINKS DOS PROJETOS ================= */
-
 .project-link{
+
     display:inline-block;
 
     margin-top:20px;
 
-    padding:12px 22px;
+    padding:12px 24px;
 
-    border-radius:25px;
-
-    background:#ff2fb3;
+    background:linear-gradient(
+        45deg,
+        #ff2fb3,
+        #d946ef
+    );
 
     color:white;
 
     text-decoration:none;
 
-    font-weight:bold;
+    font-weight:600;
 
-    transition:0.3s;
+    border-radius:30px;
 
     box-shadow:
-    0 0 20px rgba(255,47,179,0.4);
+        0 0 15px rgba(255,47,179,0.5);
+
+    transition:all .3s ease;
 }
 
 .project-link:hover{
@@ -332,9 +336,10 @@ body{
     transform:translateY(-4px);
 
     box-shadow:
-    0 0 30px #ff2fb3;
-}
+        0 0 25px rgba(255,47,179,0.8);
 
+    color:white;
+}
 /* ================= CONTATO ================= */
 
 #contato p{
